@@ -1,2 +1,48 @@
-# PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai
-This is a tool that automatically monitors the price difference between Lighter and Popdex for arbitrage purposes
+# 熊猫寨PopDEX <-> Lighter 价差套利工具
+
+这是熊猫寨套利产品的一部分，整个产品由于涉及交易所数量较大，在技术细节与合作细节方面都需要时间处理。
+
+最近Popdex热度不错，而且会在月底closed beta结束前再进行一次奖励，于是乎，我们推出了这款产品。
+
+由于套利产品的特殊性，只有在PopDEX使用了[PANDA]邀请码的钱包可以成功使用此产品
+
+有任何问题可以联系 https://t.me/Chosmos2025
+
+为了使您在使用过程里顺利，希望您仔细阅读一下步骤！
+
+## 1.服务器的购买
+
+虽然为了满足不同客户的使用习惯，我们有Linux、MAC、windows的不同版本。
+
+但依然希望您使用Linux运行脚本，这是因为个人设备存在网络与电源方面的不确定性，而云服务器会减少此方面的风险。
+
+推荐在以下三个厂商购买云服务器：
+1. vultr 【新人可领取100美金，但需要一个月内消耗掉，需要信用卡类似撸AWS】https://www.vultr.com/?ref=9915549-9J
+2. 阿里云 https://www.aliyun.com/minisite/goods?userCode=bwzu4y9m
+3. 腾讯云 https://curl.qcloud.com/eOn6o376
+
+推荐服务器配置2C2G以上
+推荐服务器地区：日本东京[关于服务器地区，详见 Lighter和PopDEX关于IP地区的规定]
+
+## 2.部署脚本
+
+### 2.1 Linux系统
+
+#### 2.1.1 在VPS厂商的界面打开8000端口
+此处以腾讯云为例（其他厂商操作类似）：
+首先，
+
+#### 2.1.2 导入工具进服务器
+输入命令: git clone https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai
+
+### 2.2 Windows系统
+
+等待补充
+
+### 2.3 Mac系统
+
+等待补充
+
+## 3.部署脚本
+
+在命令行输入：
