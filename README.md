@@ -22,7 +22,7 @@
 3. 腾讯云 https://curl.qcloud.com/eOn6o376
 
 推荐服务器配置2C2G以上
-推荐服务器地区：日本东京[关于服务器地区，详见 Lighter和PopDEX关于IP地区的规定]
+推荐服务器地区：日本东京[关于服务器地区，详见 Lighter和PopDEX关于IP地区的规定]https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/blob/main/Lighter%E5%92%8CPopDEX%E5%85%B3%E4%BA%8EIP%E5%9C%B0%E5%8C%BA%E7%9A%84%E8%A7%84%E5%AE%9A.md#lighter-%E5%92%8C-popdex-%E7%A6%81%E6%AD%A2%E5%9B%BD%E5%AE%B6%E5%8F%8A%E5%9C%B0%E5%8C%BA%E5%AF%B9%E7%85%A7%E8%A1%A8
 
 ## 2.部署脚本
 
