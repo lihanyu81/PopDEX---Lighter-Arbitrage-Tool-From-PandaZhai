@@ -47,37 +47,33 @@
 
 在命令行输入：
 
-## 4. macOS Apple Silicon 封包下载
+## 4. Linux x64 单文件下载
 
-当前版本为 `v0.1.0`，适用于 Apple Silicon（arm64）和 macOS 15.5 或更高版本。Windows、Linux 以及 Intel Mac 不能使用此封包。
+当前版本为 `v0.1.0`，适用于 x86-64 Linux。产物由 Python 3.12 和 PyInstaller 6.15 构建，是单个 Linux ELF 可执行文件，不需要安装 Python、依赖库或 Docker。
 
-由于 GitHub 单次上传限制和网络稳定性，封包存放在 [`downloads/v0.1.0`](downloads/v0.1.0) 中并拆成连续分卷。使用以下命令下载仓库并自动合并：
+下载仓库并校验文件：
 
 ```bash
 git clone https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai.git
-cd PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/downloads/v0.1.0
+cd PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai
 
-cat panda-arb-0.1.0-macos-arm64.tar.gz.part-* > panda-arb-0.1.0-macos-arm64.tar.gz
-shasum -a 256 -c panda-arb-0.1.0-macos-arm64.tar.gz.sha256
-tar -xzf panda-arb-0.1.0-macos-arm64.tar.gz
-cd panda-arb-0.1.0-macos-arm64
+sha256sum -c panda-arb-0.1.0-linux-x64-onefile.sha256
+chmod +x panda-arb-0.1.0-linux-x64-onefile
 ```
 
 校验结果必须显示：
 
 ```text
-panda-arb-0.1.0-macos-arm64.tar.gz: OK
+panda-arb-0.1.0-linux-x64-onefile: OK
 ```
 
 首次运行：
 
 ```bash
-./panda-arb config init
-./panda-arb wallet create
-./panda-arb config check
-./panda-arb serve
+./panda-arb-0.1.0-linux-x64-onefile config init
+./panda-arb-0.1.0-linux-x64-onefile wallet create
+./panda-arb-0.1.0-linux-x64-onefile config check
+./panda-arb-0.1.0-linux-x64-onefile serve --host 0.0.0.0 --port 8000 --no-browser
 ```
 
-发布包已经包含 Python 运行时和依赖，不需要安装 Python 或执行 `pip install`。封包中不包含 Python 源码、`.env`、`.env.example`、Agent 私钥或运行数据库；`config init` 和 `wallet create` 会在每位用户自己的系统配置目录中生成对应文件。
-
-macOS 封包目前尚未进行 Apple Developer 签名和公证。请务必先完成 SHA-256 校验，并仅在确认仓库来源可信后运行。
+单文件已经包含 Python 运行时、依赖、前端静态资源和 Lighter Linux signer。封包中不包含 `.env`、Agent 私钥或运行数据库；`config init` 和 `wallet create` 会在每位用户自己的系统配置目录中生成对应文件。请务必先完成 SHA-256 校验，并仅在确认仓库来源可信后运行。
