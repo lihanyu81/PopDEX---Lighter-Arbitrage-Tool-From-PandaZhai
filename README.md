@@ -15,7 +15,7 @@
 
 - https://t.me/Chosmos2025
 - 视频配置教程 https://youtu.be/kfeVYszfr20?si=c2rnAwP4RAQBEJSW
-
+- 作者推特：https://x.com/Chosmos110
 ## 使用前须知
 
 本工具涉及数字资产交易。价差的出现不代表一定能够获得利润，实际结果可能受到以下因素影响：
