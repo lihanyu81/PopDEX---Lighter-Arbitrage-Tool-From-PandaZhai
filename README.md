@@ -51,13 +51,26 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 请阅读 https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/tree/main/agent-wallet-source
 
 #### 2.1.4 首次运行
-
+检查配置
 ```bash
 ./panda-arb-0.1.0-linux-x64-onefile config init
 ./panda-arb-0.1.0-linux-x64-onefile wallet create
 ./panda-arb-0.1.0-linux-x64-onefile config check
+```
+
+运行
+```bash
 ./panda-arb-0.1.0-linux-x64-onefile serve --host 0.0.0.0 --port 8000 --no-browser
 ```
 
+查询8000端口占用
+```bash
+sudo lsof -i :8000
+```
+
+释放端口
+```bash
+kill -9 [PID]
+```
 单文件已经包含 Python 运行时、依赖、前端静态资源和 Lighter Linux signer。封包中不包含 `.env`、Agent 私钥或运行数据库；`config init` 和 `wallet create` 会在每位用户自己的系统配置目录中生成对应文件。请务必先完成 SHA-256 校验，并仅在确认仓库来源可信后运行。
 
