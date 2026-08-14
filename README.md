@@ -48,7 +48,7 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 ```
 #### 2.1.3 授权PopDEX Agent钱包并补充.env
 
-Agent 钱包的本机生成、检查及授权实现位于 [`agent-wallet-source/`](agent-wallet-source/)，采用 MIT 许可证，可独立安装和审计。该目录不包含套利策略、执行、风控、生产私钥或其他运行凭据。
+请阅读 https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/tree/main/agent-wallet-source
 
 #### 2.1.4 首次运行
 
