@@ -77,3 +77,7 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 ```
 
 单文件已经包含 Python 运行时、依赖、前端静态资源和 Lighter Linux signer。封包中不包含 `.env`、Agent 私钥或运行数据库；`config init` 和 `wallet create` 会在每位用户自己的系统配置目录中生成对应文件。请务必先完成 SHA-256 校验，并仅在确认仓库来源可信后运行。
+
+## 5. POPDEX Agent 钱包开源源码
+
+Agent 钱包的本机生成、检查及授权实现位于 [`agent-wallet-source/`](agent-wallet-source/)，采用 MIT 许可证，可独立安装和审计。该目录不包含套利策略、执行、风控、生产私钥或其他运行凭据。
