@@ -14,6 +14,7 @@
 如有使用问题，请通过 Telegram 联系：
 
 - https://t.me/Chosmos2025
+- 视频配置教程 https://youtu.be/kfeVYszfr20?si=c2rnAwP4RAQBEJSW
 
 ## 使用前须知
 
