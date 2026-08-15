@@ -11,6 +11,8 @@
 > [!IMPORTANT]
 > 由于产品授权机制限制，只有在 PopDEX 使用邀请码 `PANDA` 的钱包才能正常使用本工具。
 
+PopDEX 使用邀请码 `PANDA`  点击直达：https://app.popdex.xyz/zh-CN/referral?referralCode=PANDA
+
 如有使用问题，请通过 Telegram 联系：
 
 - https://t.me/Chosmos2025
@@ -286,10 +288,20 @@ http://服务器IP:8000
 ## 5. 后台运行
 
 直接运行程序时，关闭 SSH 窗口可能导致程序退出。临时后台运行可以使用：
-
+SSH隧道模式
 ```bash
 nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
   --host 127.0.0.1 \
+  --port 8000 \
+  --no-browser \
+  > panda-arb.log 2>&1 &
+
+echo $! > panda-arb.pid
+```
+公网模式
+```bash
+nohup ./panda-arb-0.1.0-linux-x64-onefile serve \
+  --host 0.0.0.0 \
   --port 8000 \
   --no-browser \
   > panda-arb.log 2>&1 &
