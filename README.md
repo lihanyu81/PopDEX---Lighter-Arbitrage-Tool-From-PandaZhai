@@ -123,8 +123,8 @@ debian
 ```bash
 mkdir -p ~/rblighter-arbitrage
 cd PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai
-curl -fLO https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/raw/main/panda-arb-0.2.0-linux-x64-onefile
-curl -fLO https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/raw/main/panda-arb-0.2.0-linux-x64-onefile.sha256
+curl -fLO https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/raw/main/panda-arb-0.3.0-linux-x64-onefile
+curl -fLO https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-PandaZhai/raw/main/panda-arb-0.3.0-linux-x64-onefile.sha256
 ```
 
 ### 2.3 校验文件完整性
@@ -132,13 +132,13 @@ curl -fLO https://github.com/lihanyu81/PopDEX---Lighter-Arbitrage-Tool-From-Pand
 运行：
 
 ```bash
-sha256sum -c panda-arb-0.2.0-linux-x64-onefile.sha256
+sha256sum -c panda-arb-0.3.0-linux-x64-onefile.sha256
 ```
 
 校验结果必须显示：
 
 ```text
-panda-arb-0.1.0-linux-x64-onefile: OK
+panda-arb-0.3.0-linux-x64-onefile: OK
 ```
 
 如果出现 `FAILED`、找不到文件或哈希值不一致，请不要继续运行。应重新下载文件，并确认仓库地址正确。
@@ -146,13 +146,13 @@ panda-arb-0.1.0-linux-x64-onefile: OK
 校验通过后添加执行权限：
 
 ```bash
-chmod +x panda-arb-0.2.0-linux-x64-onefile
+chmod +x panda-arb-0.3.0-linux-x64-onefile
 ```
 
 可以先查看命令帮助：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile --help
+./panda-arb-0.3.0-linux-x64-onefile --help
 ```
 
 ---
@@ -162,7 +162,7 @@ chmod +x panda-arb-0.2.0-linux-x64-onefile
 ### 3.1 初始化配置
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile config init
+./panda-arb-0.3.0-linux-x64-onefile config init
 ```
 
 请根据提示完成配置。不要把 `.env`、API Key、私钥或其他凭据发送给任何人，也不要提交到 GitHub。
@@ -170,13 +170,13 @@ chmod +x panda-arb-0.2.0-linux-x64-onefile
 ### 3.2 创建 Agent 钱包
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile wallet create
+./panda-arb-0.3.0-linux-x64-onefile wallet create
 ```
 
 检查生成的 Agent 信息：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile wallet inspect
+./panda-arb-0.3.0-linux-x64-onefile wallet inspect
 ```
 
 Linux 默认将 Agent 文件保存在：
@@ -223,7 +223,7 @@ ls -l ~/.config/panda-arb/agent.env
 完成配置和 Agent 授权后运行：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile config check
+./panda-arb-0.3.0-linux-x64-onefile config check
 ```
 
 如果检查未通过，请先根据错误提示修正配置，不要直接启动交易服务。
@@ -237,7 +237,7 @@ ls -l ~/.config/panda-arb/agent.env
 在服务器中启动：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile serve \
+./panda-arb-0.3.0-linux-x64-onefile serve \
   --host 127.0.0.1 \
   --port 8000 \
   --no-browser
@@ -264,7 +264,7 @@ http://127.0.0.1:8000
 只有在明确了解风险的情况下，才使用：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile serve \
+./panda-arb-0.3.0-linux-x64-onefile serve \
   --host 0.0.0.0 \
   --port 8000 \
   --no-browser
@@ -293,7 +293,7 @@ http://服务器IP:8000
 直接运行程序时，关闭 SSH 窗口可能导致程序退出。临时后台运行可以使用：
 SSH隧道模式
 ```bash
-nohup ./panda-arb-0.2.0-linux-x64-onefile serve \
+nohup ./panda-arb-0.3.0-linux-x64-onefile serve \
   --host 127.0.0.1 \
   --port 8000 \
   --no-browser \
@@ -303,7 +303,7 @@ echo $! > panda-arb.pid
 ```
 公网模式
 ```bash
-nohup ./panda-arb-0.2.0-linux-x64-onefile serve \
+nohup ./panda-arb-0.3.0-linux-x64-onefile serve \
   --host 0.0.0.0 \
   --port 8000 \
   --no-browser \
@@ -361,7 +361,7 @@ sudo lsof -i :8000
 重新添加执行权限：
 
 ```bash
-chmod +x panda-arb-0.2.0-linux-x64-onefile
+chmod +x panda-arb-0.3.0-linux-x64-onefile
 ```
 
 ### `Exec format error`
@@ -401,7 +401,7 @@ kill -9 PID
 也可以更换端口：
 
 ```bash
-./panda-arb-0.2.0-linux-x64-onefile serve \
+./panda-arb-0.3.0-linux-x64-onefile serve \
   --host 127.0.0.1 \
   --port 8001 \
   --no-browser
